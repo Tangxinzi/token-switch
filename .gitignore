@@ -1,0 +1,22 @@
+.DS_Store
+.env
+.env.*
+
+# Keep release binaries in GitHub Releases, not in git.
+downloads/*
+!downloads/README.md
+
+# Secrets and signing materials must never be published.
+*.key
+*.pem
+*.p12
+*.mobileprovision
+*.sig.key
+
+# Local tooling and generated files.
+node_modules/
+dist/
+target/
+*.db
+*.sqlite
+*.sqlite3

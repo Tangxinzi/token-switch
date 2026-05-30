@@ -1,6 +1,6 @@
 {
   "version": "1.10.0",
-  "notes": "1.10.0 发布包占位说明，正式发布前请替换为本次更新内容。",
+  "notes": "Token Switch 1.10.0 提供 Provider、模型、Token 管理与桌面端更新能力。请从官网或 GitHub Releases 获取最新安装包。",
   "pub_date": "2026-05-30T00:00:00Z",
   "url": "https://github.com/Tangxinzi/token-switch/releases/download/v1.10.0/Token%20Switch_1.10.0_universal.tar.gz",
   "macos_dmg": "https://github.com/Tangxinzi/token-switch/releases/download/v1.10.0/Token%20Switch_1.10.0_universal.dmg",

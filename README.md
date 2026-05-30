@@ -37,8 +37,8 @@ Token Switch 是一个用于管理、切换和测试 CLI / Agent 工具 Provider
 正式发布后，下载文件会作为 GitHub Release Assets 上传到对应版本，例如：
 
 ```text
-https://github.com/<owner>/token-switch/releases/download/v1.10.0/Token%20Switch_1.10.0_universal.dmg
-https://github.com/<owner>/token-switch/releases/download/v1.10.0/Token%20Switch_1.10.0_universal.tar.gz
+https://github.com/Tangxinzi/token-switch/releases/download/v1.10.0/Token%20Switch_1.10.0_universal.dmg
+https://github.com/Tangxinzi/token-switch/releases/download/v1.10.0/Token%20Switch_1.10.0_universal.tar.gz
 ```
 
 ## 自动更新

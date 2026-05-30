@@ -65,6 +65,10 @@ Token Switch 的应用实现基于以下公开开源项目和生态工具构建�
 
 本公开仓库只列出发布信息和依赖致谢，不包含 Token Switch 的私有源码。
 
+## 相关项目
+
+- [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk)：项目中引用的公开仓库。
+
 ## 仓库边界
 
 这个仓库可以公开包含：

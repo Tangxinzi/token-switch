@@ -58,16 +58,11 @@ Token Switch 的应用实现基于以下公开开源项目和生态工具构建�
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)：界面样式工具。
 - [Lucide](https://github.com/lucide-icons/lucide)：图标库。
 - [Chart.js](https://github.com/chartjs/Chart.js)：图表展示。
+- [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk)：桌宠。
 - [js-yaml](https://github.com/nodeca/js-yaml)：YAML 配置解析。
 - [toml-node](https://github.com/BinaryMuse/toml-node)：TOML 配置解析。
 - [Babel Parser](https://github.com/babel/babel)：JavaScript / TypeScript 语法解析能力。
 - [Playwright](https://github.com/microsoft/playwright)：界面自动化验证工具。
-
-本公开仓库只列出发布信息和依赖致谢，不包含 Token Switch 的私有源码。
-
-## 相关项目
-
-- [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk)：项目中引用的公开仓库。
 
 ## 仓库边界
 

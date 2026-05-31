@@ -42,16 +42,6 @@ Token Switch 面向同时使用多个 AI CLI、Agent 工具和第三方中转服
 - GitHub Releases：[https://github.com/Tangxinzi/token-switch/releases/latest](https://github.com/Tangxinzi/token-switch/releases/latest)
 - 自动更新清单：[update.json](./update.json)
 
-macOS 用户优先下载 `Token Switch_<version>_universal.dmg`。自动更新使用同版本的 `.tar.gz` 更新包和 `.sig` 签名文件。
-
-发布文件示例：
-
-```text
-Token Switch_1.10.0_universal.dmg
-Token Switch_1.10.0_universal.tar.gz
-Token Switch_1.10.0_universal.tar.gz.sig
-```
-
 ## 使用场景
 
 - 同时使用多个 AI Provider，需要频繁切换 API 地址、模型和 Token。

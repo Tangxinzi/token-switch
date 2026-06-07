@@ -1,54 +1,33 @@
 # Token Switch
 
-AI CLI / Agent Provider、模型与 Token 管理桌面应用。
+本地 AI Token 供应商切换工具，支持 macOS、Windows 使用，下载访问[产品页 https://token.ferer.net/switch](https://token.ferer.net/switch)。
 
-[官网](https://token.ferer.net/) · [下载最新版](https://github.com/Tangxinzi/token-switch/releases/latest) · [更新清单](./update.json)
+![Token Switch 桌面端产品界面](https://token.ferer.net/images/token-switch-light.png)
 
-Token Switch 面向同时使用多个 AI CLI、Agent 工具和第三方中转服务的用户。它将 Provider、模型、Token、连通性测试、用量查询和本地 Relay 等能力集中到一个桌面应用中，减少反复修改配置文件、切换环境变量和手动排查接口状态的成本。
+Token Switch 是一个桌面端本地配置工作台，用来集中管理常用 AI 编程客户端的 Provider、模型接口和 Token 配置。选择客户端，切换供应商，测试连通性，然后安全写入本机配置，减少反复编辑配置文件、切换环境变量和手动排查接口状态的成本。
 
-## 核心功能
+## 核心能力
 
-- Provider 集中管理：统一维护不同服务商、中转站和自定义 API 地址。
-- 模型与 Token 切换：在常用模型、Token 和配置组合之间快速切换。
-- 连通性测试：检查 Provider 是否可用，并辅助拉取或验证模型列表。
-- Codex 配置管理：管理 Codex Provider 配置与 `auth.json` 相关信息。
-- Claude 配置管理：区分 Claude Desktop 与 Claude Code 的不同配置结构。
-- 原始配置编辑：保留直接编辑配置文件的入口，适合高级用户精细调整。
-- 用量查询模板：为不同服务商或中转站配置余额、用量、额度查询方式。
-- 中转站监测：探测连通性、响应延迟、模型可用性和接口兼容情况。
-- 本地 Relay：通过本地服务转发请求，便于统一管理 Provider 路由。
-- 操作日志与数据库查询：方便回看配置变更、请求记录和本地数据状态。
-- 内嵌 WebView：在应用内打开常用网页、控制台或服务商页面。
-- 桌宠窗口：提供独立桌宠窗口与状态展示能力。
+- 一键切换本地 Token 供应商：把常用 Provider、中转站、自定义 API 地址和模型配置收进一个工作台。
+- 客户端配置管理：管理 Codex、Claude Code、OpenCode、OpenClaw 与 Hermes 的模型接口配置。
+- 模型与 Token 管理：维护多个 Token、模型和 Provider 组合，并在需要时快速切换。
+- 连通性测试：测试 Provider 可用性、响应状态、延迟和基础接口兼容情况。
+- 模型列表辅助：辅助拉取、验证和维护不同供应商下的模型列表。
+- Token 统计：查看 Token 相关统计与用量概览，便于了解本地配置使用情况。
+- 控制台：集中查看配置、状态和操作入口，减少在多个工具页面之间来回切换。
+- Provider 列表：优化展示常用供应商、最近使用信息和配置状态。
+- 本地 Relay：通过本地服务统一转发请求，并按当前活动供应商动态路由。
+- 高级配置入口：保留原始配置编辑、日志、数据库查询、中转站监测和内嵌 WebView 等能力。
 
-## 支持的工具
+## 支持的客户端
 
-当前版本支持以下应用和 CLI 工具的配置管理：
-
-| 工具 | 说明 |
+| 客户端 | 说明 |
 | --- | --- |
 | Codex | Provider、模型、Token、`auth.json` 与 TOML 配置管理 |
-| Claude Desktop | Claude 桌面端配置库管理 |
 | Claude Code | Claude Code CLI 配置管理 |
 | OpenCode | Provider 与模型配置管理 |
 | OpenClaw | Provider 与模型配置管理 |
 | Hermes | YAML 配置管理 |
-
-## 下载与安装
-
-当前版本：`1.10.0`
-
-- 官网：[https://token.ferer.net/](https://token.ferer.net/)
-- GitHub Releases：[https://github.com/Tangxinzi/token-switch/releases/latest](https://github.com/Tangxinzi/token-switch/releases/latest)
-- 自动更新清单：[update.json](./update.json)
-
-## 使用场景
-
-- 同时使用多个 AI Provider，需要频繁切换 API 地址、模型和 Token。
-- 使用第三方中转站，需要检查接口连通性、延迟和模型支持情况。
-- 需要在 Codex、Claude、OpenCode 等工具之间保持配置一致。
-- 希望用桌面应用管理配置，同时保留原始配置文件的可控性。
-- 需要本地 Relay 统一转发请求，并查看基础请求记录。
 
 ## 技术栈与开源项目
 
@@ -71,5 +50,6 @@ Token Switch 基于现代桌面应用和前端工程生态构建，并引用了�
 
 如需下载、查看更新或了解产品信息，请访问：
 
+- 产品页：[https://token.ferer.net/switch](https://token.ferer.net/switch)
 - 官网：[https://token.ferer.net/](https://token.ferer.net/)
 - GitHub：[https://github.com/Tangxinzi/token-switch](https://github.com/Tangxinzi/token-switch)

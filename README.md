@@ -2,7 +2,7 @@
 
 Token Switch 是一个配置 Agent 的工作台，Provider、模型接口和 Token 配置。选择客户端，切换供应商，测试连通性。支持 macOS、Windows 使用，下载访问 [产品页 https://token.ferer.net/switch](https://token.ferer.net/switch)。
 
-Token Switch 桌面端产品界面
+![Token Switch 桌面端产品界面](https://token.ferer.net/images/token-switch-light.png)
 
 ## 命令行安装 Token Switch
 

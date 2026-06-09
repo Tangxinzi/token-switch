@@ -1,14 +1,12 @@
 # Token Switch
 
-本地 AI Token 供应商切换工具，支持 macOS、Windows 使用，下载访问 [产品页 https://token.ferer.net/switch](https://token.ferer.net/switch)。
+Token Switch 是一个配置 Agent 的工作台，Provider、模型接口和 Token 配置。选择客户端，切换供应商，测试连通性。支持 macOS、Windows 使用，下载访问 [产品页 https://token.ferer.net/switch](https://token.ferer.net/switch)。
 
-![Token Switch 桌面端产品界面](https://token.ferer.net/images/token-switch-light.png)
-
-Token Switch 是一个桌面端本地配置工作台，用来集中管理常用 AI 编程客户端的 Provider、模型接口和 Token 配置。选择客户端，切换供应商，测试连通性，然后安全写入本机配置，减少反复编辑配置文件、切换环境变量和手动排查接口状态的成本。
+Token Switch 桌面端产品界面
 
 ## 命令行安装 Token Switch
 
-[Token Switch](https://token.ferer.net/switch) 官网访问下载外，也支持提供命令行快捷安装方式，用于通过终端快速下载、安装或更新桌面端。该能力适合首次配置新机器、重装应用后恢复使用，或希望通过脚本化方式完成安装的场景。
+[Token Switch](https://token.ferer.net/switch) 官网访问下载外，也支持提供命令行快捷安装方式，用于通过终端快速下载、安装或更新桌面端。
 
 macOS：
 
@@ -30,6 +28,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://token.ferer.
 - 桌宠陪伴：按自己的使用场景调整桌宠的角色、语气、行为边界和任务偏好。
 
 ## Agent 支持
+
 
 | Agent       | 说明                                        |
 | ----------- | ----------------------------------------- |

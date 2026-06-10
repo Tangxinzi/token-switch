@@ -58,7 +58,9 @@ Token Switch 基于现代桌面应用和前端工程生态构建，并引用了�
 
 ## 自定义桌宠 Prompt
 
-用户只要调整下面的 Prompt 提示词，目录结构、桌宠角色、名称、描述和 SVG 主题都会跟着动态生成。可以把下面整段作为生成或适配自定义桌宠的 Prompt：
+用户只要调整下面的 Prompt 提示词，目录结构、桌宠角色、名称、描述和 SVG 主题都会跟着动态生成。可以把下面整段作为生成或适配自定义桌宠的 Prompt。
+
+这份 Prompt 分成两层资源：基础资源是应用一定会使用的常规状态；增强资源用于贴边极简模式、悬停探出和点击彩蛋，不提供也能运行，提供后桌宠会更完整。
 
 ```text
 请根据下面的用户设定，为 Token Switch 生成一个完整可测试的自定义桌宠资源包。
@@ -79,7 +81,7 @@ Token Switch 基于现代桌面应用和前端工程生态构建，并引用了�
 4. 目标目录必须使用该 characterId：
    ~/.token-switch/pets/<characterId>/
 
-请创建这些文件：
+请创建这些基础文件：
 - ~/.token-switch/pets/<characterId>/manifest.json
 - ~/.token-switch/pets/<characterId>/default.svg
 - ~/.token-switch/pets/<characterId>/idle.svg
@@ -91,6 +93,21 @@ Token Switch 基于现代桌面应用和前端工程生态构建，并引用了�
 - ~/.token-switch/pets/<characterId>/building.svg
 - ~/.token-switch/pets/<characterId>/notification.svg
 - ~/.token-switch/pets/<characterId>/hover.svg
+
+建议额外创建这些增强文件：
+- ~/.token-switch/pets/<characterId>/drag.svg
+- ~/.token-switch/pets/<characterId>/mini-idle.svg
+- ~/.token-switch/pets/<characterId>/mini-peek.svg
+- ~/.token-switch/pets/<characterId>/mini-typing.svg
+- ~/.token-switch/pets/<characterId>/mini-alert.svg
+- ~/.token-switch/pets/<characterId>/mini-happy.svg
+- ~/.token-switch/pets/<characterId>/mini-sleep.svg
+- ~/.token-switch/pets/<characterId>/mini-enter.svg
+- ~/.token-switch/pets/<characterId>/mini-enter-sleep.svg
+- ~/.token-switch/pets/<characterId>/mini-crabwalk.svg
+- ~/.token-switch/pets/<characterId>/poke-double.svg
+- ~/.token-switch/pets/<characterId>/poke-burst.svg
+- ~/.token-switch/pets/<characterId>/poke-annoyed.svg
 
 硬性限制：
 1. manifest.json 文件大小必须小于 2MB。
@@ -114,8 +131,10 @@ Token Switch 基于现代桌面应用和前端工程生态构建，并引用了�
 4. 使用简洁几何形状和少量颜色，建议 4-7 个主色。
 5. 每个状态的角色外形要一致，只改变表情、姿态、道具或局部动作暗示。
 6. 不要做复杂背景、卡片、说明文字或 UI 面板。
+7. 极简模式资源需要在更小可见区域里仍能识别角色，例如半身、侧身、探头或贴边姿态。
+8. 点击彩蛋资源可以更夸张一点，但仍应保持角色一致性，不要突然换成另一个角色。
 
-状态设计：
+基础状态设计：
 - default.svg：中性站立姿态，用于设置页预览；必须是静态图标版，主体居中、轮廓清楚、viewBox 单独裁切到合适视觉大小，不能显得比其他内置桌宠预览图小一圈。
 - idle.svg：自然待机，体现角色性格。
 - thinking.svg：思考状态，结合角色主题设计思考符号或姿态。
@@ -127,7 +146,22 @@ Token Switch 基于现代桌面应用和前端工程生态构建，并引用了�
 - notification.svg：提醒状态，可以有铃铛、感叹符号图标或抬头动作。
 - hover.svg：鼠标悬停状态，友好回应，比如挥手、眨眼、靠近或展示主题小道具。
 
-manifest.json 必须使用动态生成的 characterId、name、description 和 ariaLabel，结构如下：
+增强状态设计：
+- drag.svg：拖拽状态，表现被移动、抓住、滑行或小幅慌张的姿态。
+- mini-idle.svg：贴靠屏幕右边缘的极简空闲状态；建议只露出半身、侧脸或小爪子，轮廓要清楚。
+- mini-peek.svg：极简模式下鼠标悬停时探出来；可以比 mini-idle 更外探、更好奇。
+- mini-typing.svg：极简模式下正在思考、输入或构建；建议保留小屏幕、节奏线或工作道具。
+- mini-alert.svg：极简模式下通知或失败；可以用抬头、感叹符号、警觉表情。
+- mini-happy.svg：极简模式下完成任务；可以用开心、闪光、小勾号。
+- mini-sleep.svg：极简模式下休眠；可以趴在边缘、闭眼、睡眠气泡。
+- mini-enter.svg：从正常模式切换到极简模式时短暂展示；可以设计成角色钻向屏幕边缘。
+- mini-enter-sleep.svg：休眠状态下进入极简模式时短暂展示；可以设计成抱着睡意慢慢缩进边缘。
+- mini-crabwalk.svg：反复点击彩蛋之一；可以设计成贴边横移、侧步或躲避。
+- poke-double.svg：双击桌宠时短暂展示；可以是惊讶、跳一下、眨眼或回头。
+- poke-burst.svg：短时间连续点击 4 下时短暂展示；可以更兴奋、闪光、弹跳或冒出主题粒子。
+- poke-annoyed.svg：反复戳很多次时短暂展示；可以有点被打扰、护住道具或小小抗议，但不要攻击性过强。
+
+manifest.json 必须使用动态生成的 characterId、name、description 和 ariaLabel。基础结构如下：
 
 {
   "characters": {
@@ -152,6 +186,44 @@ manifest.json 必须使用动态生成的 characterId、name、description 和 a
   }
 }
 
+如果已经生成增强资源，manifest.json 建议补全为：
+
+{
+  "characters": {
+    "<characterId>": {
+      "name": "<name>",
+      "description": "<description>",
+      "ariaLabel": "<name> 桌宠",
+      "default": "default.svg",
+      "animations": {
+        "idle": "idle.svg",
+        "thinking": "thinking.svg",
+        "typing": "typing.svg",
+        "completed": "completed.svg",
+        "failed": "failed.svg",
+        "sleeping": "sleeping.svg",
+        "building": "building.svg",
+        "notification": "notification.svg",
+        "hover": "hover.svg",
+        "drag": "drag.svg",
+        "miniIdle": "mini-idle.svg",
+        "miniPeek": "mini-peek.svg",
+        "miniTyping": "mini-typing.svg",
+        "miniAlert": "mini-alert.svg",
+        "miniHappy": "mini-happy.svg",
+        "miniSleep": "mini-sleep.svg",
+        "miniEnter": "mini-enter.svg",
+        "miniEnterSleep": "mini-enter-sleep.svg",
+        "miniCrabwalk": "mini-crabwalk.svg",
+        "pokeDouble": "poke-double.svg",
+        "pokeBurst": "poke-burst.svg",
+        "pokeAnnoyed": "poke-annoyed.svg"
+      },
+      "audio": {}
+    }
+  }
+}
+
 完成后请执行校验：
 1. 确认目标目录为 ~/.token-switch/pets/<characterId>/。
 2. 用 JSON.parse 或等效方式校验 manifest.json。
@@ -159,7 +231,8 @@ manifest.json 必须使用动态生成的 characterId、name、description 和 a
 4. 确认 manifest 中引用的所有 SVG 文件都存在。
 5. 确认动画 SVG 都包含统一 viewBox，例如 viewBox="0 0 128 128"。
 6. 单独检查 default.svg：在 20px、32px、64px 三种尺寸预览时主体都清晰、居中、不裁切，视觉大小接近内置桌宠 default 图。
-7. 列出最终创建的文件、文件大小、生成的 characterId、name、description。
+7. 如果生成了增强资源，确认 manifest 中的 miniIdle、miniPeek、miniTyping、miniAlert、miniHappy、miniSleep、miniEnter、miniEnterSleep、miniCrabwalk、pokeDouble、pokeBurst、pokeAnnoyed 都能找到对应文件。
+8. 列出最终创建的文件、文件大小、生成的 characterId、name、description。
 
 最后提醒我：
 打开 Token Switch 设置页，展开“桌宠”，查看是否出现新角色 <name>。如果没有出现，重启应用后再检查；如果设置页显示配置警告，优先检查 JSON 格式、角色 ID 和资源相对路径。

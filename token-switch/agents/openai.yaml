@@ -1,0 +1,4 @@
+interface:
+  display_name: "Token Switch"
+  short_description: "下载、配置并使用 Token Switch 管理 AI Agent"
+  default_prompt: "Use $token-switch to install Token Switch and configure my AI Agent providers."

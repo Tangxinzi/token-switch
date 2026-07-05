@@ -2,7 +2,7 @@
 
 Token Switch 是一个配置 Agent 的工作台，Provider、模型接口和 Token 配置。选择客户端，切换供应商，测试连通性。支持 macOS、Windows 使用，下载访问 [产品页 https://token.ferer.net/switch](https://token.ferer.net/switch)。
 
-![Token Switch 桌面端产品界面](https://token.ferer.net/images/token-switch-light.png)
+![Token Switch 桌面端产品界面](https://token.ferer.net/images/ts/token-active-light.png)
 
 ## 命令行安装 Token Switch
 
@@ -43,18 +43,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://token.ferer.
 
 Token Switch 基于现代桌面应用和前端工程生态构建，并引用了以下公开项目：
 
-- [Tauri](https://github.com/tauri-apps/tauri)：桌面应用框架与系统能力集成。
-- [React](https://github.com/facebook/react)：前端界面框架。
-- [Vite](https://github.com/vitejs/vite)：前端开发与构建工具。
-- [TypeScript](https://github.com/microsoft/TypeScript)：类型系统与工程基础。
-- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)：界面样式工具。
-- [Lucide](https://github.com/lucide-icons/lucide)：图标库。
-- [Chart.js](https://github.com/chartjs/Chart.js)：图表展示。
-- [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk)：桌宠相关引用。
-- [js-yaml](https://github.com/nodeca/js-yaml)：YAML 配置解析。
-- [toml-node](https://github.com/BinaryMuse/toml-node)：TOML 配置解析。
-- [Babel Parser](https://github.com/babel/babel)：JavaScript / TypeScript 语法解析能力。
-- [Playwright](https://github.com/microsoft/playwright)：界面自动化验证工具。
+- Tauri：桌面应用框架与系统能力集成。
+- React：前端界面框架。
+- Vite：前端开发与构建工具。
+- TypeScript：类型系统与工程基础。
+- Tailwind CSS：界面样式工具。
+- Lucide：图标库。
+- Chart.js：图表展示。
+- clawd-on-desk：桌宠相关引用。
+- js-yaml：YAML 配置解析。
+- toml-node：TOML 配置解析。
+- Babel Parser：JavaScript / TypeScript 语法解析能力。
+- Playwright：界面自动化验证工具。
 
 ## 自定义桌宠 Prompt
 
@@ -244,4 +244,10 @@ manifest.json 必须使用动态生成的 characterId、name、description 和 a
 
 - 产品页：[https://token.ferer.net/switch](https://token.ferer.net/switch)
 - 官网：[https://token.ferer.net/](https://token.ferer.net/)
-- GitHub：[https://github.com/Tangxinzi/token-switch](https://github.com/Tangxinzi/token-switch)
+- 支持能力：Agent 配置、Provider 管理、Token 统计、本地 Relay 与桌宠资源生成
+
+## REDSkill
+
+- 多格式上传优先使用单文件版：[SKILL.md](SKILL.md)
+- CLI 上传继续使用目录包：[token-switch](token-switch/)
+- 上传说明：[REDSKILL_UPLOAD.md](REDSKILL_UPLOAD.md)

@@ -4,7 +4,7 @@
 
 - 产品页：`https://token.ferer.net/switch`
 - 官网：`https://token.ferer.net/`
-- GitHub：`https://github.com/Tangxinzi/token-switch`
+- 支持能力：Agent 配置、Provider 管理、Token 统计、本地 Relay 与桌宠资源生成
 - macOS 安装脚本：`https://token.ferer.net/install.sh`
 - Windows 安装脚本：`https://token.ferer.net/install.ps1`
 - 实时安装清单：`https://token.ferer.net/api/install.json?target=<target>&arch=<arch>&current_version=0.0.0`
